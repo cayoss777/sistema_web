@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\RolController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,3 +52,6 @@ Route::delete('producto/{test}',[ProductoController::class,'destroy'])->name('pr
 Route::get('cliente',[ClienteController::class,'index'])->name('cliente.index');
 Route::post('cliente',[ClienteController::class,'store'])->name('cliente.store');
 Route::put('cliente/{test}',[ClienteController::class,'update'])->name('cliente.update');
+
+
+Route::get('rol',[RolController::class,'index'])->name('rol.index');
