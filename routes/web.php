@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProveedorController;
+use App\Http\Controllers\ClienteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,6 +46,8 @@ Route::put('producto/{test}',[ProductoController::class,'update'])->name('produc
 Route::delete('producto/{test}',[ProductoController::class,'destroy'])->name('producto.destroy');
 
 
-Route::get('proveedor',[ProveedorController::class,'index'])->name('proveedor.index');
-Route::post('proveedor',[ProveedorController::class,'store'])->name('proveedor.store');
-Route::put('proveedor/{test}',[ProveedorController::class,'update'])->name('proveedor.update');
+
+
+Route::get('cliente',[ClienteController::class,'index'])->name('cliente.index');
+Route::post('cliente',[ClienteController::class,'store'])->name('cliente.store');
+Route::put('cliente/{test}',[ClienteController::class,'update'])->name('cliente.update');
