@@ -4,8 +4,9 @@
 <main class="main">
     <!-- Breadcrumb -->
     <ol class="breadcrumb">
-        <li class="breadcrumb-item active"><a href="/">BACKEND - SISTEMA DE COMPRAS - VENTAS</a></li>
+        <li class="breadcrumb-item active"><a href="/">Ventas</a></li>
     </ol>
+
     <div class="container-fluid">
         <!-- Ejemplo de tabla Listado -->
         <div class="card">
@@ -52,10 +53,6 @@
                             <td>{{$cat->nombre}}</td>
                             <td>{{$cat->descripcion}}</td>
                             <td>
-
-                           
-
-
 
                                 @if($cat->condicion=="1")
 
@@ -105,13 +102,12 @@
 
                     </tbody>
                 </table>
-                
-               
-                {{$categorias->links()}}
+                              
             </div>
         </div>
         <!-- Fin ejemplo de tabla Listado -->
     </div>
+
     <!--Inicio del modal agregar-->
     <div class="modal fade" id="abrirmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-primary modal-lg" role="document">

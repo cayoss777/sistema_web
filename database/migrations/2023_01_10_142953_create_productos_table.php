@@ -13,12 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('categorias', function (Blueprint $table) {
+        Schema::create('productos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre',50)->unique();
-            $table->string('descripcion',256)->nullable();
+            $table->integer('idcategoria')->unsigned();
+            $table->string('codigo',50)->nullable();
+            $table->string('nombre',100)->unique();
+            $table->decimal('precio_venta',11,2);
+            $table->integer('stock');
             $table->boolean('condicion')->default(1);
             $table->timestamps();
+
+            $table->foreign('idcategoria')->references('id')->on('categorias');
         });
     }
 
@@ -29,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categorias');
+        Schema::dropIfExists('productos');
     }
 };

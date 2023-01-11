@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ProductoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +37,8 @@ Route::delete('categoria/{test}',[CategoriaController::class,'destroy'])->name('
 
 //Route::get('categoria',[CategoriaController::class,'store']);
 // antes Route::get('/categoria', 'CategoriaController@store');
+
+Route::get('producto',[ProductoController::class,'index'])->name('producto.index');
+Route::post('producto',[ProductoController::class,'store'])->name('producto.store');
+Route::put('producto/{test}',[ProductoController::class,'update'])->name('producto.update');
+Route::delete('producto/{test}',[ProductoController::class,'destroy'])->name('producto.destroy');
