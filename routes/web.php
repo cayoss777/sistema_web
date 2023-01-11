@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\RolController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,3 +56,9 @@ Route::put('cliente/{test}',[ClienteController::class,'update'])->name('cliente.
 
 
 Route::get('rol',[RolController::class,'index'])->name('rol.index');
+
+
+Route::get('user',[UserController::class,'index'])->name('user.index');
+Route::post('user',[UserController::class,'store'])->name('user.store');
+Route::put('user/{test}',[UserController::class,'update'])->name('user.update');
+Route::delete('user/{test}',[UserController::class,'destroy'])->name('user.destroy');
