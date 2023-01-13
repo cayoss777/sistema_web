@@ -81,7 +81,7 @@ body {
   font-size: 0.875rem;
   font-weight: normal;
   line-height: 1.5;
-  color: #151b1e;
+  color: #288dc0;
   background-color: #e4e5e6; }
 
 [tabindex="-1"]:focus {
@@ -389,7 +389,7 @@ small,
 mark,
 .mark {
   padding: 0.2em;
-  background-color: #fcf8e3; }
+  background-color: #ddbe25; }
 
 .list-unstyled {
   padding-left: 0;
@@ -7758,8 +7758,10 @@ base-chart.chart {
   -ms-flex-direction: column;
       flex-direction: column;
   padding: 0;
+
+  
   color: #fff;
-  background: #29363d; }
+  background:#0087ba}
   .sidebar .sidebar-close {
     position: absolute;
     right: 0;
