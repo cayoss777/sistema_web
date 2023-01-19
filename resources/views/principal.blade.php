@@ -36,7 +36,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <img src="img/avatars/cayo.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
-                    <span class="d-md-down-none">usuario </span>
+                    <span class="d-md-down-none">{{Auth::user()->usuario}} </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <div class="dropdown-header text-center">
@@ -58,7 +58,19 @@
 
     <div class="app-body">
 
-        @include("plantilla.siderbar")
+               
+       @if(Auth::check())
+            @if (Auth::user()->idrol == 1)
+                @include('plantilla.sidebaradministrador')
+            @elseif (Auth::user()->idrol == 2)
+                @include('plantilla.sidebarvendedor')
+            @elseif (Auth::user()->idrol == 3)
+                @include('plantilla.sidebarcomprador')
+            @else
+
+            @endif
+
+        @endif
         <!-- Contenido Principal -->
         @yield('contenido')
         <!-- /Fin del contenido principal -->

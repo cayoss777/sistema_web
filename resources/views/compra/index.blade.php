@@ -59,7 +59,9 @@
                                 <tr>
                                     <td>
                                      
-                                     <a href="{{URL::action('CompraController@show',$comp->id)}}">
+                                    
+                                     <!--FALTA LLAMAR en href-->
+                                     <a href="">
                                        <button type="button" class="btn btn-warning btn-md">
                                          <i class="fa fa-eye fa-2x"></i> Ver detalle
                                        </button> &nbsp;
