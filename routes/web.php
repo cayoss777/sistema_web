@@ -23,6 +23,8 @@ use App\Http\Controllers\CompraController;
 |
 */
 
+
+
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -90,16 +92,18 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
 Route::get('compra',[CompraController::class,'index'])->name('compra.index');
-Route::get('compra/{id}',[CompraController::class,'show'])->name('compra.show');
+Route::get('compra/create',[CompraController::class,'create'])->name('compra.create');
+Route::post('compra',[CompraController::class,'store'])->name('compra.store');
+//Route::get('compra/{id}',[CompraController::class,'show'])->name('compra.show');
 //Route::get('compra',[CompraController::class,'show'])->name('compra.show');
 
 //Route::get('compra/{id}',function($id){});
 
-Route::post('compra',[CompraController::class,'store'])->name('compra.store');
+
 Route::put('compra/{test}',[CompraController::class,'update'])->name('compra.update');
 
 //Route::post('compra/{test}',[CompraController::class,'create'])->name('compra.create');
-Route::get('compra/create',[CompraController::class,'create'])->name('compra.create');
+
 
 Route::delete('compra/{test}',[CompraController::class,'destroy'])->name('compra.destroy');
 

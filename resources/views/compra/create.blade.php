@@ -1,3 +1,4 @@
+<script src="{{asset('js/jquery.min.js')}}"></script>
 @extends('principal')
 @section('contenido')
 
@@ -6,7 +7,7 @@
 
  <div class="card-body">
 
- <h2>Agregars Compra</h2>
+ <h2>Agregar Compra</h2>
 
  <span><strong>(*) Campo obligatorio</strong></span><br/>
 
@@ -174,7 +175,7 @@
     </div><!--fin del div card body-->
   </main>
 
-@push('scripts')
+  
  <script>
      
   $(document).ready(function(){
@@ -279,6 +280,6 @@
      }
 
  </script>
-@endpush
 
+@stack('scripts')
 @endsection

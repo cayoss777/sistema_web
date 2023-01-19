@@ -72,8 +72,8 @@ class CompraController extends Controller
  
                  $compra = new Compra();
                  $compra->idproveedor = $request->id_proveedor;
-                 //$compra->idusuario = \Auth::user()->id;
-                 $compra->idusuario = 1;
+                 $compra->idusuario = \Auth::user()->id;
+                 //$compra->idusuario = 1;
                  $compra->tipo_identificacion = $request->tipo_identificacion;
                  $compra->num_compra = $request->num_compra;
                  $compra->fecha_compra = $mytime->toDateString();

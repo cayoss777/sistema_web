@@ -13,6 +13,7 @@
     <link href="{{asset('css/simple-line-icons.min.css')}}" rel="stylesheet">
     <!-- Main styles for this application -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <script src="{{asset('js/jquery.min.js')}}"></script>
 </head>
 
 <body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
@@ -82,6 +83,7 @@
     </footer>
 
     <!-- Bootstrap and necessary plugins -->
+    
     <script src="{{asset('js/jquery.min.js')}}"></script>
     <script src="{{asset('js/popper.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
@@ -311,6 +313,9 @@
     
     
     </script>
+    @stack('scripts')
+    
+    
 </body>
 
 </html>
