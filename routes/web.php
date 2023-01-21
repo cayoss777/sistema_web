@@ -116,10 +116,15 @@ Route::delete('compra/{test}',[CompraController::class,'destroy'])->name('compra
 //Route::get('/pdfcompra/{id}',[CompraController::class,'pdf'])->name('Compra.pdf');
 
 
-Route::get('/pdfcompra/{id}',[CompraController::class,'pdf']);
+Route::get('/pdfCompra/{id}',[CompraController::class,'pdf']);
 //Route::get('pdfcompra/{id}',[CompraController::class,'pdf']);
+//Route::get('/pdfCompra/{id}', 'CompraController@pdf')->name('compra_pdf');
 
+//Route::get('/pdfcompra/{id}',[CompraController::class,'pdf']);
+//Route::get('/listarProductoPdf', 'ProductoController@listarPdf')->name('productos_pdf');
 
+//Route::get('/listarProductoPdf',[ProductoController::class,'listarPdf'])->name('productos_pdf');
+Route::get('/listarProductoPdf',[ProductoController::class,'listarPdf']);
 
 
 
@@ -165,6 +170,6 @@ Route::delete('venta/{test}',[VentaController::class,'destroy'])->name('venta.de
 //Route::get('/pdfcompra/{id}',[CompraController::class,'pdf'])->name('Compra.pdf');
 
 
-Route::get('/pdfcompra/{id}',[VentaController::class,'pdf']);
+Route::get('/pdfVenta/{id}',[VentaController::class,'pdf']);
 //Route::get('pdfcompra/{id}',[CompraController::class,'pdf']);
 

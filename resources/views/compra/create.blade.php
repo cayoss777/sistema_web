@@ -124,9 +124,9 @@
                     <tr class="bg-success">
                         <th>Eliminar</th>
                         <th>Producto</th>
-                        <th>Precio(USD$)</th>
+                        <th>Precio(S/.)</th>
                         <th>Cantidad</th>
-                        <th>SubTotal (USD$)</th>
+                        <th>SubTotal (S/.)</th>
                     </tr>
                 </thead>
                  
@@ -135,17 +135,17 @@
 
                     <tr>
                         <th  colspan="4"><p align="right">TOTAL:</p></th>
-                        <th><p align="right"><span id="total">USD$ 0.00</span> </p></th>
+                        <th><p align="right"><span id="total">S/. 0.00</span> </p></th>
                     </tr>
 
                     <tr>
                         <th colspan="4"><p align="right">TOTAL IMPUESTO (20%):</p></th>
-                        <th><p align="right"><span id="total_impuesto">USD$ 0.00</span></p></th>
+                        <th><p align="right"><span id="total_impuesto">S/. 0.00</span></p></th>
                     </tr>
 
                     <tr>
                         <th  colspan="4"><p align="right">TOTAL PAGAR:</p></th>
-                        <th><p align="right"><span align="right" id="total_pagar_html">USD$ 0.00</span> <input type="hidden" name="total_pagar" id="total_pagar"></p></th>
+                        <th><p align="right"><span align="right" id="total_pagar_html">S/. 0.00</span> <input type="hidden" name="total_pagar" id="total_pagar"></p></th>
                     </tr>  
 
                 </tfoot>
@@ -206,7 +206,7 @@
              subtotal[cont]=cantidad*precio_compra;
              total= total+subtotal[cont];
              
-             var fila= '<tr class="selected" id="fila'+cont+'"><td><button type="button" class="btn btn-danger btn-sm" onclick="eliminar('+cont+');"><i class="fa fa-times fa-2x"></i></button></td> <td><input type="hidden" name="id_producto[]" value="'+id_producto+'">'+producto+'</td> <td><input type="number" id="precio_compra[]" name="precio_compra[]"  value="'+precio_compra+'"> </td>  <td><input type="number" name="cantidad[]" value="'+cantidad+'"> </td> <td>$'+subtotal[cont]+' </td></tr>';
+             var fila= '<tr class="selected" id="fila'+cont+'"><td><button type="button" class="btn btn-danger btn-sm" onclick="eliminar('+cont+');"><i class="fa fa-times fa-2x"></i></button></td> <td><input type="hidden" name="id_producto[]" value="'+id_producto+'">'+producto+'</td> <td><input type="number" id="precio_compra[]" name="precio_compra[]"  value="'+precio_compra+'"> </td>  <td><input type="number" name="cantidad[]" value="'+cantidad+'"> </td> <td>S/.'+subtotal[cont]+' </td></tr>';
              cont++;
              limpiar();
              totales();
@@ -240,12 +240,12 @@
 
      function totales(){
 
-        $("#total").html("USD$ " + total.toFixed(2));
+        $("#total").html("S/. " + total.toFixed(2));
 
         total_impuesto=total*impuesto/100;
         total_pagar=total+total_impuesto;
-        $("#total_impuesto").html("USD$ " + total_impuesto.toFixed(2));
-        $("#total_pagar_html").html("USD$ " + total_pagar.toFixed(2));
+        $("#total_impuesto").html("S/. " + total_impuesto.toFixed(2));
+        $("#total_pagar_html").html("S/. " + total_pagar.toFixed(2));
         $("#total_pagar").val(total_pagar.toFixed(2));
         
      }
@@ -270,9 +270,9 @@
         total_impuesto= total*20/100;
         total_pagar_html = total + total_impuesto;
        
-        $("#total").html("USD$" + total);
-        $("#total_impuesto").html("USD$" + total_impuesto);
-        $("#total_pagar_html").html("USD$" + total_pagar_html);
+        $("#total").html("S/." + total);
+        $("#total_impuesto").html("S/." + total_impuesto);
+        $("#total_pagar_html").html("S/." + total_pagar_html);
         $("#total_pagar").val(total_pagar_html.toFixed(2));
        
         $("#fila" + index).remove();

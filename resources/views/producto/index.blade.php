@@ -17,6 +17,15 @@
                         </button>
                         
 
+                        <a href="{{url('listarProductoPdf')}}" target="_blank">
+                            <button type="button" class="btn btn-success btn-lg">
+                                <i class="fa fa-file fa-2x"></i>&nbsp;&nbsp;Reporte PDF
+                                
+                            </button>
+
+                        </a>
+
+
                         <!-- FALTA pdf-->
                         
 
@@ -40,7 +49,7 @@
                                     <th>Categoria</th>
                                     <th>Producto</th>
                                     <th>Codigo</th>
-                                    <th>Precio Venta (USD$)
+                                    <th>Precio Venta (S./)
                                     <th>Stock</th>
                                     <th>Imagen</th>
                                     <th>Estado</th>

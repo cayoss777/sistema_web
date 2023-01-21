@@ -48,9 +48,9 @@
                     <tr class="bg-success">
 
                         <th>Producto</th>
-                        <th>Precio (USD$)</th>
+                        <th>Precio (S/.)</th>
                         <th>Cantidad</th>
-                        <th>SubTotal (USD$)</th>
+                        <th>SubTotal (S/.)</th>
                     </tr>
                 </thead>
                  
@@ -63,17 +63,17 @@
 
                     <tr>
                         <th  colspan="3"><p align="right">TOTAL:</p></th>
-                        <th><p align="right">${{number_format($compra->total,2)}}</p></th>
+                        <th><p align="right">S/.{{number_format($compra->total,2)}}</p></th>
                     </tr>
 
                     <tr>
                         <th colspan="3"><p align="right">TOTAL IMPUESTO (20%):</p></th>
-                        <th><p align="right">${{number_format($compra->total*20/100,2)}}</p></th>
+                        <th><p align="right">S/.{{number_format($compra->total*20/100,2)}}</p></th>
                     </tr>
 
                     <tr>
                         <th  colspan="3"><p align="right">TOTAL PAGAR:</p></th>
-                        <th><p align="right">${{number_format($compra->total+($compra->total*20/100),2)}}</p></th>
+                        <th><p align="right">S/.{{number_format($compra->total+($compra->total*20/100),2)}}</p></th>
                     </tr> 
 
                 </tfoot>

@@ -44,7 +44,7 @@
                                     <th>Proveedor</th>
                                     <th>Tipo de identificación</th>
                                     <th>Comprador</th> 
-                                    <th>Total (USD$)</th>
+                                    <th>Total (S/.)</th>
                                     <th>Impuesto</th>
                                     <th>Estado</th>
                                     <th>Cambiar Estado</th>
@@ -74,7 +74,7 @@
                                     <td>{{$comp->proveedor}}</td>
                                     <td>{{$comp->tipo_identificacion}}</td>
                                     <td>{{$comp->nombre}}</td>
-                                    <td>${{number_format($comp->total,2)}}</td>
+                                    <td>S/.{{number_format($comp->total,2)}}</td>
                                     <td>{{$comp->impuesto}}</td>
                                     <td>
                                       
