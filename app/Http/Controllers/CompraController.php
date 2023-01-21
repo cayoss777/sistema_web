@@ -12,10 +12,11 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Exception;
 
 use Illuminate\Support\Facades\DB;
+
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use \App\Models\DetalleCompra;
-
+use PDF;
 class CompraController extends Controller
 {
     //

@@ -11,6 +11,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CompraController;
+use App\Http\Controllers\VentaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -108,5 +109,62 @@ Route::put('compra/{test}',[CompraController::class,'update'])->name('compra.upd
 Route::delete('compra/{test}',[CompraController::class,'destroy'])->name('compra.destroy');
 
 //Route::resource('compra', 'CompraController'); 
-Route::get('/pdfCompra/{id}', 'CompraController@pdf')->name('compra_pdf');
+//Route::get('/pdfCompra/{id}', 'CompraController@pdf')->name('/pdfCompra/{id}');
+
+
+
+//Route::get('/pdfcompra/{id}',[CompraController::class,'pdf'])->name('Compra.pdf');
+
+
+Route::get('/pdfcompra/{id}',[CompraController::class,'pdf']);
+//Route::get('pdfcompra/{id}',[CompraController::class,'pdf']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('venta',[VentaController::class,'index'])->name('venta.index');
+Route::get('venta/create',[VentaController::class,'create'])->name('venta.create');
+Route::post('venta',[VentaController::class,'store'])->name('venta.store');
+//Route::get('compra/{id}',[CompraController::class,'show'])->name('compra.show');
+//Route::get('compra',[CompraController::class,'show'])->name('compra.show');
+
+//Route::get('compra/{id}',function($id){});
+
+
+Route::put('venta/{test}',[VentaController::class,'update'])->name('venta.update');
+
+//Route::post('compra/{test}',[CompraController::class,'create'])->name('compra.create');
+
+
+Route::delete('venta/{test}',[VentaController::class,'destroy'])->name('venta.destroy');
+
+//Route::resource('compra', 'CompraController'); 
+//Route::get('/pdfCompra/{id}', 'CompraController@pdf')->name('/pdfCompra/{id}');
+
+
+
+//Route::get('/pdfcompra/{id}',[CompraController::class,'pdf'])->name('Compra.pdf');
+
+
+Route::get('/pdfcompra/{id}',[VentaController::class,'pdf']);
+//Route::get('pdfcompra/{id}',[CompraController::class,'pdf']);
 

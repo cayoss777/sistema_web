@@ -3,7 +3,7 @@
 use Hamcrest\Core\IsCollectionContaining;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\LazyCollection;
-
+use Barryvdh\DomPDF\PDF;
 return [
 
     /*
@@ -184,10 +184,13 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
+        
+
         /*
          * Package Service Providers...
          */
-
+        Barryvdh\DomPDF\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -213,6 +216,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ])->toArray(),
 
 ];
