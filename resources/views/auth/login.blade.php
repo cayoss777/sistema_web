@@ -1,6 +1,7 @@
 @extends('auth.contenido')
 
 @section('login')
+
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <div class="row justify-content-center">
       <div class="col-md-5">
@@ -9,7 +10,7 @@
           <form class="form-horizontal was-validated" method="POST" action="{{route('login')}}">
          @csrf
               <div class="card-body">
-              <h3 class="text-center bg-success">Compras - Ventas</h3>
+              <h3 class="text-center bg-primary">Compras y Ventas de productos</h3>
              
               <div class="form-group mb-3{{$errors->has('usuario'?'is-invalid':'')}}">
                 <span class="input-group-addon"><i class="icon-user"></i></span>
@@ -18,12 +19,12 @@
               </div>
               <div class="form-group mb-4{{$errors->has('usuario'?'is-invalid':'')}}">
                 <span class="input-group-addon"><i class="icon-lock"></i></span>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña">
                 {!!$errors->first('password','<span class="invalid-feedback">:message</span>')!!}
               </div>
               <div class="row">
                 <div class="col-6">
-                  <button type="submit" class="btn btn-success px-4"><i class="fa fa-sign-in fa-2x"></i> Iniciar sesión</button>
+                  <button type="submit" class="btn btn-primary px-4"><i class="fa fa-sign-in fa-2x"></i> Iniciar sesión</button>
                 </div>
               </div>
             </div>

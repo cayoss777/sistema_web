@@ -48,10 +48,10 @@
                     <tr class="bg-success">
 
                         <th>Producto</th>
-                        <th>Precio Venta (USD$)</th>
-                        <th>Descuento (USD$)</th>
+                        <th>Precio Venta (S/.)</th>
+                        <th>Descuento (S/.)</th>
                         <th>Cantidad</th>
-                        <th>SubTotal (USD$)</th>
+                        <th>SubTotal (S/.)</th>
                     </tr>
                 </thead>
                  
@@ -64,17 +64,17 @@
                    <th><h4 id="total">{{$venta->total}}</h4></th>-->
                    <tr>
                         <th  colspan="4"><p align="right">TOTAL:</p></th>
-                        <th><p align="right">${{number_format($venta->total,2)}}</p></th>
+                        <th><p align="right">S/.{{number_format($venta->total,2)}}</p></th>
                     </tr>
 
                     <tr>
                         <th colspan="4"><p align="right">TOTAL IMPUESTO (20%):</p></th>
-                        <th><p align="right">${{number_format($venta->total*20/100,2)}}</p></th>
+                        <th><p align="right">S/.{{number_format($venta->total*20/100,2)}}</p></th>
                     </tr>
 
                     <tr>
                         <th  colspan="4"><p align="right">TOTAL PAGAR:</p></th>
-                        <th><p align="right">${{number_format($venta->total+($venta->total*20/100),2)}}</p></th>
+                        <th><p align="right">S/.{{number_format($venta->total+($venta->total*20/100),2)}}</p></th>
                     </tr>  
                 </tfoot>
 
@@ -88,7 +88,7 @@
                       <td>${{$det->precio}}</td>
                       <td>{{$det->descuento}}</td>
                       <td>{{$det->cantidad}}</td>
-                      <td>${{number_format($det->cantidad*$det->precio - $det->cantidad*$det->precio*$det->descuento/100,2)}}</td>
+                      <td>S/.{{number_format($det->cantidad*$det->precio - $det->cantidad*$det->precio*$det->descuento/100,2)}}</td>
                     
                     
                     </tr> 
